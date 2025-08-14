@@ -4,6 +4,7 @@ export default function ScrollToTop({
   showAt = 200,
   smooth = true,
   style = {},
+  className = "",
 }) {
   const [visible, setVisible] = useState(false);
 
@@ -22,27 +23,22 @@ export default function ScrollToTop({
 
   if (!visible) return null;
 
-  const universalStyle = {
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    padding: "10px 15px",
-    backgroundColor: "#1e90ff", // DodgerBlue works in light & dark
-    color: "#fff",
-    fontSize: "18px",
-    border: "none",
-    borderRadius: "50%",
-    cursor: "pointer",
-    boxShadow: "0px 4px 8px rgba(0,0,0,0.2)",
-    transition: "all 0.3s ease",
-  };
-
   return (
     <button
       onClick={handleClick}
-      style={{ ...universalStyle, ...style }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0d6efd")}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1e90ff")}
+      className={className}
+      style={{
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        padding: "10px 15px",
+        backgroundColor: "#4cafef",
+        color: "#fff",
+        border: "none",
+        borderRadius: "50%",
+        cursor: "pointer",
+        ...style,
+      }}
     >
       ↑
     </button>
