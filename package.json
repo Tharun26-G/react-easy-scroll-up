@@ -1,11 +1,28 @@
 {
-  "name": "react-scroll-to-top", 
+  "name": "react-easy-scroll-up", 
   "version": "1.0.0",
-  "description": "A simple React scroll-to-top button component",
+  "description": "A lightweight, universal, React scroll-to-top button component",
   "type": "module",
-  "main": "./dist/react-scroll-to-top.umd.js",
-  "module": "./dist/react-scroll-to-top.es.js",
+  "main": "./dist/react-easy-scroll-up.umd.js",
+  "module": "./dist/react-easy-scroll-up.es.js",
   "files": ["dist"],
+  "keywords": [
+    "react",
+    "scroll-to-top",
+    "scroll-up",
+    "back-to-top",
+    "button"
+  ],
+  "author": "THARUN G",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tharun26-G/react-easy-scroll-up.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tharun26-G/react-easy-scroll-up/issues"
+  },
+  "homepage": "https://github.com/Tharun26-G/react-easy-scroll-up#readme",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
