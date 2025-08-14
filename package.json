@@ -1,11 +1,13 @@
 {
-  "name": "react-easy-scroll-up", 
-  "version": "1.0.0",
+  "name": "react-easy-scroll-up",
+  "version": "1.0.1",
   "description": "A lightweight, universal, React scroll-to-top button component",
   "type": "module",
   "main": "./dist/react-easy-scroll-up.umd.js",
   "module": "./dist/react-easy-scroll-up.es.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react",
     "scroll-to-top",
