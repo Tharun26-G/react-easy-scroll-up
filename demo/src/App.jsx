@@ -1,46 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import ScrollToTop from "./ScrollToTop";
 
-export default function ScrollToTop({
-  showAt = 200,
-  smooth = true,
-  style = {},
-  className = "",
-}) {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > showAt);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [showAt]);
-
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: smooth ? "smooth" : "auto",
-    });
-  };
-
-  if (!visible) return null;
-
+export default function App() {
   return (
-    <button
-      onClick={handleClick}
-      className={className}
-      style={{
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        padding: "10px 15px",
-        backgroundColor: "#4cafef",
-        color: "#fff",
-        border: "none",
-        borderRadius: "50%",
-        cursor: "pointer",
-        ...style,
-      }}
-    >
-      ↑
-    </button>
+    <div style={{ height: "2000px", padding: "20px" }}>
+      <h1>Scroll Down to See the Button</h1>
+      <p>Keep scrolling...</p>
+
+      <ScrollToTop showAt={300} smooth={true} />
+    </div>
   );
 }
